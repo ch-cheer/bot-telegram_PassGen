@@ -13,9 +13,9 @@ char getRandomChar() {
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     static const uint32_t max_index = (sizeof(charset) - 1);
-    static std::random_device rd;
-    static std::mt19937 rng(rd());
-    static std::uniform_int_distribution<uint32_t> dist(0, max_index);
+    static random_device rd;
+    static mt19937 rng(rd());
+    static uniform_int_distribution<uint32_t> dist(0, max_index);
 
     return charset[dist(rng)];
 }
@@ -29,9 +29,9 @@ char getRandomSpecChar() {
         "!@#$%^&*()_+{}[]|:;'<>,.?/";
 
     static const uint32_t max_index = (sizeof(charset) - 1);
-    static std::random_device rd;
-    static std::mt19937 rng(rd());
-    static std::uniform_int_distribution<uint32_t> dist(0, max_index);
+    static random_device rd;
+    static mt19937 rng(rd());
+    static uniform_int_distribution<uint32_t> dist(0, max_index);
 
     return charset[dist(rng)];
 }
